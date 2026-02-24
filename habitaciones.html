@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Habitaciones | Celeste Resort</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+
+:root{
+  --primary:#0f8f8c;
+  --primary-light:#38b2ac;
+  --accent:#c6a25b;
+  --dark:#0a2e2e;
+  --light:#ffffff;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins', sans-serif;}
+body{background:#f4fafa;color:var(--dark);}
+header{
+  background:linear-gradient(90deg,var(--primary),var(--primary-light));
+  padding:15px 50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:fixed;
+  width:100%;
+  top:0;
+  z-index:1000;
+}
+header img{height:60px;}
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:25px;
+  font-weight:500;
+}
+nav a:hover{color:var(--accent);}
+
+.hero{
+  height:70vh;
+  background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+  url('https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=1260');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+  padding:20px;
+  margin-top:80px;
+}
+.hero h1{font-size:50px;}
+.hero span{color:var(--accent);}
+
+section{
+  padding:100px 50px;
+  text-align:center;
+}
+
+h2{
+  font-size:36px;
+  margin-bottom:40px;
+  color:var(--primary);
+}
+
+.rooms{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:40px;
+}
+
+.room-card{
+  background:white;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.room-card:hover{
+  transform:translateY(-8px);
+}
+
+.room-card img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+}
+
+.room-content{
+  padding:25px;
+  text-align:left;
+}
+
+.room-content h3{
+  color:var(--primary);
+  margin-bottom:10px;
+}
+
+.room-content p{
+  font-size:15px;
+  line-height:1.6;
+  margin-bottom:15px;
+}
+
+.features{
+  font-size:14px;
+  margin-bottom:20px;
+}
+
+.features i{
+  color:var(--accent);
+  margin-right:8px;
+}
+
+.price{
+  font-weight:600;
+  font-size:18px;
+  color:var(--dark);
+  margin-bottom:15px;
+}
+
+.btn{
+  display:inline-block;
+  padding:12px 25px;
+  background:var(--accent);
+  color:white;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+footer{
+  background:var(--primary);
+  color:white;
+  text-align:center;
+  padding:30px;
+}
+
+/* ========================= */
+/* ADAPTACIÓN LIMPIA MÓVIL */
+/* ========================= */
+
+@media (max-width: 1024px){
+
+header{
+padding:12px 25px;
+}
+
+header img{
+height:50px;
+}
+
+nav a{
+margin-left:18px;
+font-size:14px;
+}
+
+.hero{
+height:90vh;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.hero p{
+font-size:15px;
+}
+
+section{
+padding:80px 30px;
+}
+
+h2{
+font-size:30px;
+}
+
+.cards{
+gap:25px;
+}
+
+.card img{
+height:200px;
+}
+
+form{
+padding:25px;
+}
+
+}
+
+/* CELULARES PEQUEÑOS */
+@media (max-width: 600px){
+
+header{
+padding:10px 15px;
+}
+
+header img{
+height:45px;
+}
+
+nav a{
+margin-left:12px;
+font-size:13px;
+}
+
+.hero h1{
+font-size:28px;
+}
+
+.hero p{
+font-size:14px;
+}
+
+section{
+padding:60px 20px;
+}
+
+h2{
+font-size:24px;
+}
+
+.btn{
+padding:12px 25px;
+font-size:14px;
+}
+
+}
+/* ===== ARREGLO SOLO HEADER MOVIL ===== */
+
+@media (max-width: 768px){
+
+header{
+padding:10px 15px;
+flex-direction:column;
+align-items:center;
+}
+
+.nav-container{
+margin-top:8px;
+}
+
+nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+nav a{
+margin:5px 10px;
+font-size:14px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png" alt="Celeste Resort">
+  <nav>
+      <a href="index.html">Inicio</a>
+ <a href="sobre.html">Sobre Nosotros</a>
+        <a href="habitaciones.html">Habitaciones</a>
+        <a href="#reservas">Reservas</a>
+        <a href="#contacto">Contacto</a>
+
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Nuestras <span>Habitaciones</span></h1>
+    <p>Confort, elegancia y vistas panorámicas en Achocalla</p>
+  </div>
+</section>
+
+<section>
+  <h2>Suites & Habitaciones Premium</h2>
+
+  <div class="rooms">
+
+    <div class="room-card">
+      <img src="https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=800">
+      <div class="room-content">
+        <h3>Suite Ejecutiva con Vista</h3>
+        <p>Amplia suite con vista panorámica, cama king size y sala privada para una experiencia exclusiva.</p>
+        <div class="features">
+          <p><i class="fas fa-bed"></i> Cama King</p>
+          <p><i class="fas fa-mountain"></i> Vista panorámica</p>
+          <p><i class="fas fa-wifi"></i> WiFi Premium</p>
+        </div>
+        <div class="price">Desde $180 / noche</div>
+        <a href="index.html#reservas" class="btn">Reservar</a>
+      </div>
+    </div>
+
+    <div class="room-card">
+      <img src="https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800">
+      <div class="room-content">
+        <h3>Habitación Deluxe</h3>
+        <p>Diseño moderno con detalles elegantes, perfecta para viajes de descanso o negocios.</p>
+        <div class="features">
+          <p><i class="fas fa-bed"></i> Cama Queen</p>
+          <p><i class="fas fa-bath"></i> Baño privado de lujo</p>
+          <p><i class="fas fa-tv"></i> Smart TV</p>
+        </div>
+        <div class="price">Desde $130 / noche</div>
+        <a href="index.html#reservas" class="btn">Reservar</a>
+      </div>
+    </div>
+
+    <div class="room-card">
+      <img src="https://images.pexels.com/photos/262048/pexels-photo-262048.jpeg?auto=compress&cs=tinysrgb&w=800">
+      <div class="room-content">
+        <h3>Suite Presidencial</h3>
+        <p>La máxima expresión de lujo en Celeste Resort, con jacuzzi privado y terraza exclusiva.</p>
+        <div class="features">
+          <p><i class="fas fa-crown"></i> Terraza privada</p>
+          <p><i class="fas fa-hot-tub"></i> Jacuzzi</p>
+          <p><i class="fas fa-concierge-bell"></i> Servicio VIP</p>
+        </div>
+        <div class="price">Desde $350 / noche</div>
+        <a href="index.html#reservas" class="btn">Reservar</a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 Celeste Resort | Hotel 5 Estrellas en Achocalla</p>
+</footer>
+
+</body>
+</html>

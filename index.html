@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<link rel="icon" type="image/png" href="favicon.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Celeste Resort | 5 Estrellas en Achocalla</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+<style>
+:root{
+  --primary:#0f8f8c;
+  --primary-light:#38b2ac;
+  --accent:#c6a25b;
+  --dark:#0a2e2e;
+  --light:#ffffff;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins', sans-serif;}
+html, body{overflow-x:hidden;}
+body{background:#f4fafa;color:var(--dark);}
+header{background:linear-gradient(90deg,var(--primary),var(--primary-light));
+padding:15px 50px;display:flex;justify-content:space-between;align-items:center;
+position:fixed;width:100%;top:0;z-index:1000;}
+header img{height:60px;}
+.nav-container {display:flex;align-items:center;}
+nav a{color:white;text-decoration:none;margin-left:25px;font-weight:500;}
+nav a:hover{color:var(--accent);}
+.hero{height:100vh;background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+url('https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+background-size:cover;background-position:center;display:flex;
+justify-content:center;align-items:center;text-align:center;color:white;padding:20px;}
+.hero h1{font-size:55px;}
+.hero span{color:var(--accent);}
+.btn{display:inline-block;margin-top:25px;padding:15px 35px;
+background:var(--accent);color:white;border-radius:40px;
+text-decoration:none;font-weight:600;}
+section{padding:100px 50px;text-align:center;}
+h2{font-size:38px;margin-bottom:40px;color:var(--primary);}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;}
+.card{background:white;border-radius:15px;overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);}
+.card img{width:100%;height:220px;object-fit:cover;}
+.card h3{padding:15px;color:var(--primary);}
+form{max-width:600px;margin:auto;background:#fff;padding:30px;border-radius:15px;}
+input, textarea, select{width:100%;padding:12px;margin:10px 0;border-radius:8px;border:1px solid #ddd;}
+button{background:var(--primary);color:white;padding:15px 30px;border:none;
+border-radius:40px;cursor:pointer;font-weight:600;width:100%;}
+.map-container{width:100%;height:400px;border-radius:20px;overflow:hidden;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);margin-top:20px;}
+footer{background:var(--primary);color:white;text-align:center;padding:30px;}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;
+width:60px;height:60px;display:flex;justify-content:center;align-items:center;
+border-radius:50%;font-size:30px;text-decoration:none;z-index:1001;}
+
+
+/* ========================= */
+/* ADAPTACIÓN LIMPIA MÓVIL */
+/* ========================= */
+
+@media (max-width: 1024px){
+
+header{
+padding:12px 25px;
+}
+
+header img{
+height:50px;
+}
+
+nav a{
+margin-left:18px;
+font-size:14px;
+}
+
+.hero{
+height:90vh;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.hero p{
+font-size:15px;
+}
+
+section{
+padding:80px 30px;
+}
+
+h2{
+font-size:30px;
+}
+
+.cards{
+gap:25px;
+}
+
+.card img{
+height:200px;
+}
+
+form{
+padding:25px;
+}
+
+}
+
+/* CELULARES PEQUEÑOS */
+@media (max-width: 600px){
+
+header{
+padding:10px 15px;
+}
+
+header img{
+height:45px;
+}
+
+nav a{
+margin-left:12px;
+font-size:13px;
+}
+
+.hero h1{
+font-size:28px;
+}
+
+.hero p{
+font-size:14px;
+}
+
+section{
+padding:60px 20px;
+}
+
+h2{
+font-size:24px;
+}
+
+.btn{
+padding:12px 25px;
+font-size:14px;
+}
+
+}
+/* ===== ARREGLO SOLO HEADER MOVIL ===== */
+
+@media (max-width: 768px){
+
+header{
+padding:10px 15px;
+flex-direction:column;
+align-items:center;
+}
+
+.nav-container{
+margin-top:8px;
+}
+
+nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+nav a{
+margin:5px 10px;
+font-size:14px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png" alt="Celeste Resort">
+  <div class="nav-container">
+      <nav>
+        <a href="sobre.html">Sobre Nosotros</a>
+        <a href="habitaciones.html">Habitaciones</a>
+        <a href="#reservas">Reservas</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Bienvenido a <span>Celeste Resort</span></h1>
+    <p>Lujo 5 estrellas en Achocalla, La Paz - Bolivia</p>
+    <a href="#reservas" class="btn">Reservar Ahora</a>
+  </div>
+</section>
+
+<section id="sobre">
+  <h2>Sobre Nosotros</h2>
+  <p>Celeste Resort es un exclusivo hotel 5 estrellas ubicado en Achocalla, La Paz – Bolivia. Ofrecemos una experiencia de lujo con vistas panorámicas, habitaciones premium y servicio personalizado de alto nivel.</p>
+</section>
+
+<section id="habitaciones">
+  <h2>Habitaciones & Suites</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=800">
+      <h3>Suite Ejecutiva con Vista</h3>
+    </div>
+    <div class="card">
+      <img src="https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800">
+      <h3>Habitación Deluxe</h3>
+    </div>
+    <div class="card">
+      <img src="https://images.pexels.com/photos/262048/pexels-photo-262048.jpeg?auto=compress&cs=tinysrgb&w=800">
+      <h3>Suite Presidencial</h3>
+    </div>
+  </div>
+</section>
+
+<section id="ubicación">
+  <h2>Nuestra Ubicación</h2>
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15300.000000000000!2d-68.1633!3d-16.5700!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915edf14594c77c9%3A0x6b490f2095f36e9d!2sAchocalla!5e0!3m2!1ses!2sbo!4v1715000000000!5m2!1ses!2sbo"
+      width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+<section id="reservas">
+  <h2>Solicitar Reserva</h2>
+  <form action="https://formsubmit.co/celesteresort.bo@gmail.com" method="POST">
+    <input type="text" name="Nombre" placeholder="Nombre completo" required>
+    <input type="email" name="Email" placeholder="Correo electrónico" required>
+
+    <div style="display:flex; gap:10px;">
+      <div style="flex:1; text-align:left;">
+        <label style="font-size:12px; color:#666;">Ingreso</label>
+        <input type="date" name="Ingreso" required>
+      </div>
+      <div style="flex:1; text-align:left;">
+        <label style="font-size:12px; color:#666;">Salida</label>
+        <input type="date" name="Salida" required>
+      </div>
+    </div>
+
+    <select name="Pago" required>
+      <option value="">Método de pago preferido</option>
+      <option>USDT / Cripto</option>
+      <option>Tarjeta de Débito/Crédito</option>
+      <option>Transferencia Bancaria</option>
+    </select>
+
+    <button type="submit">Consultar Disponibilidad</button>
+  </form>
+</section>
+
+<section id="contacto">
+  <h2>Contacto</h2>
+  <p>📍 Achocalla, La Paz – Bolivia</p>
+  <p>📞 +591 69930230</p>
+  <p>✉ celesteresort.bo@gmail.com</p>
+
+  <form action="https://formsubmit.co/celesteresort.bo@gmail.com" method="POST">
+    <input type="text" name="Nombre" placeholder="Tu nombre" required>
+    <input type="email" name="Email" placeholder="Tu correo" required>
+    <textarea name="Mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+    <button type="submit">Enviar Mensaje</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Celeste Resort | Hotel 5 Estrellas en Achocalla</p>
+</footer>
+
+<a href="https://wa.me/59169930230" class="whatsapp" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- SELECTOR -->
+<div style="position:fixed; top:90px; right:20px; z-index:3000;">
+<select id="lang">
+<option value="es">🇪🇸 Español</option>
+<option value="en">🇺🇸 English</option>
+<option value="fr">🇫🇷 Français</option>
+<option value="de">🇩🇪 Deutsch</option>
+<option value="pt">🇵🇹 Português</option>
+<option value="it">🇮🇹 Italiano</option>
+<option value="ru">🇷🇺 Русский</option>
+<option value="zh">🇨🇳 中文</option>
+</select>
+</div>
+
+<script>
+const original = document.body.innerHTML;
+
+const translations = {
+
+en:{
+sobreTexto:"Celeste Resort is an exclusive 5-star hotel located in Achocalla, La Paz – Bolivia. We offer a luxury experience with panoramic views, premium rooms and high-level personalized service."
+},
+
+fr:{
+sobreTexto:"Celeste Resort est un hôtel exclusif 5 étoiles situé à Achocalla, La Paz – Bolivie. Nous offrons une expérience de luxe avec vues panoramiques, chambres premium et service personnalisé haut de gamme."
+},
+
+de:{
+sobreTexto:"Celeste Resort ist ein exklusives 5-Sterne-Hotel in Achocalla, La Paz – Bolivien. Wir bieten ein Luxuserlebnis mit Panoramablick, Premium-Zimmern und erstklassigem personalisiertem Service."
+},
+
+pt:{
+sobreTexto:"Celeste Resort é um hotel exclusivo 5 estrelas localizado em Achocalla, La Paz – Bolívia. Oferecemos uma experiência de luxo com vistas panorâmicas, quartos premium e serviço personalizado de alto nível."
+},
+
+it:{
+sobreTexto:"Celeste Resort è un hotel esclusivo a 5 stelle situato ad Achocalla, La Paz – Bolivia. Offriamo un'esperienza di lusso con viste panoramiche, camere premium e servizio personalizzato di alto livello."
+},
+
+ru:{
+sobreTexto:"Celeste Resort — эксклюзивный 5-звездочный отель в Ачокалье, Ла-Пас – Боливия. Мы предлагаем роскошный отдых с панорамными видами, премиальными номерами и персонализированным сервисом высокого уровня."
+},
+
+zh:{
+sobreTexto:"Celeste Resort 是位于玻利维亚拉巴斯 Achocalla 的五星级豪华酒店。我们提供全景视野、豪华客房以及高端个性化服务。"
+}
+
+};
+
+function traducir(idioma){
+
+if(idioma==="es"){
+document.body.innerHTML=original;
+location.reload();
+return;
+}
+
+let contenido = original;
+
+contenido = contenido
+.replaceAll("Sobre Nosotros","About Us")
+.replaceAll("Habitaciones","Rooms")
+.replaceAll("Reservas","Reservations")
+.replaceAll("Contacto","Contact")
+.replaceAll("Bienvenido a","Welcome to")
+.replaceAll("Lujo 5 estrellas en Achocalla, La Paz - Bolivia","5-Star Luxury in Achocalla, La Paz - Bolivia")
+.replaceAll("Reservar Ahora","Book Now")
+.replaceAll("Habitaciones & Suites","Rooms & Suites")
+.replaceAll("Suite Ejecutiva con Vista","Executive Suite with View")
+.replaceAll("Habitación Deluxe","Deluxe Room")
+.replaceAll("Suite Presidencial","Presidential Suite")
+.replaceAll("Nuestra Ubicación","Our Location")
+.replaceAll("Solicitar Reserva","Book Your Stay")
+.replaceAll("Nombre completo","Full Name")
+.replaceAll("Correo electrónico","Email Address")
+.replaceAll("Ingreso","Check-in")
+.replaceAll("Salida","Check-out")
+.replaceAll("Método de pago preferido","Preferred Payment Method")
+.replaceAll("USDT / Cripto","USDT / Crypto")
+.replaceAll("Tarjeta de Débito/Crédito","Debit/Credit Card")
+.replaceAll("Transferencia Bancaria","Bank Transfer")
+.replaceAll("Consultar Disponibilidad","Check Availability")
+.replaceAll("Tu nombre","Your Name")
+.replaceAll("Tu correo","Your Email")
+.replaceAll("Escribe tu mensaje...","Write your message...")
+.replaceAll("Enviar Mensaje","Send Message")
+.replaceAll("Hotel 5 Estrellas en Achocalla","5-Star Hotel in Achocalla");
+
+document.body.innerHTML = contenido;
+
+const sobreParrafo = document.querySelector("#sobre p");
+if(sobreParrafo){
+sobreParrafo.innerText = translations[idioma].sobreTexto;
+}
+
+}
+
+document.getElementById("lang").addEventListener("change",function(){
+traducir(this.value);
+});
+</script>
+
+</body>
+</html>

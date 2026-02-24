@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre Nosotros | Celeste Resort</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+:root{
+  --primary:#0f8f8c;
+  --primary-light:#38b2ac;
+  --accent:#c6a25b;
+  --dark:#0a2e2e;
+  --light:#ffffff;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins', sans-serif;}
+body{background:#f4fafa;color:var(--dark);}
+header{background:linear-gradient(90deg,var(--primary),var(--primary-light));
+padding:15px 50px;display:flex;justify-content:space-between;align-items:center;
+position:fixed;width:100%;top:0;z-index:1000;}
+header img{height:60px;}
+nav a{color:white;text-decoration:none;margin-left:25px;font-weight:500;}
+nav a:hover{color:var(--accent);}
+.hero{
+height:70vh;
+background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url('https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=1260');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+margin-top:80px;
+}
+.hero h1{font-size:50px;}
+.hero span{color:var(--accent);}
+section{padding:100px 50px;text-align:center;}
+h2{font-size:36px;margin-bottom:30px;color:var(--primary);}
+p{max-width:900px;margin:auto;line-height:1.8;font-size:18px;}
+.values{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:50px;
+}
+.value-box{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+.value-box i{
+font-size:40px;
+color:var(--accent);
+margin-bottom:15px;
+}
+footer{
+background:var(--primary);
+color:white;
+text-align:center;
+padding:30px;
+}
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+background:var(--accent);
+color:white;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+}
+
+/* ========================= */
+/* ADAPTACIÓN LIMPIA MÓVIL */
+/* ========================= */
+
+@media (max-width: 1024px){
+
+header{
+padding:12px 25px;
+}
+
+header img{
+height:50px;
+}
+
+nav a{
+margin-left:18px;
+font-size:14px;
+}
+
+.hero{
+height:90vh;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.hero p{
+font-size:15px;
+}
+
+section{
+padding:80px 30px;
+}
+
+h2{
+font-size:30px;
+}
+
+.cards{
+gap:25px;
+}
+
+.card img{
+height:200px;
+}
+
+form{
+padding:25px;
+}
+
+}
+
+/* CELULARES PEQUEÑOS */
+@media (max-width: 600px){
+
+header{
+padding:10px 15px;
+}
+
+header img{
+height:45px;
+}
+
+nav a{
+margin-left:12px;
+font-size:13px;
+}
+
+.hero h1{
+font-size:28px;
+}
+
+.hero p{
+font-size:14px;
+}
+
+section{
+padding:60px 20px;
+}
+
+h2{
+font-size:24px;
+}
+
+.btn{
+padding:12px 25px;
+font-size:14px;
+}
+
+}
+/* ===== ARREGLO SOLO HEADER MOVIL ===== */
+
+@media (max-width: 768px){
+
+header{
+padding:10px 15px;
+flex-direction:column;
+align-items:center;
+}
+
+.nav-container{
+margin-top:8px;
+}
+
+nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+nav a{
+margin:5px 10px;
+font-size:14px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png" alt="Celeste Resort">
+  <nav>
+    <a href="index.html">Inicio</a>
+ <a href="sobre.html">Sobre Nosotros</a>
+        <a href="habitaciones.html">Habitaciones</a>
+        <a href="#reservas">Reservas</a>
+        <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Nuestra Historia en <span>Celeste Resort</span></h1>
+    <p>Donde el lujo se encuentra con la naturaleza de Achocalla</p>
+  </div>
+</section>
+
+<section>
+  <h2>Quiénes Somos</h2>
+  <p>
+    Celeste Resort es un hotel 5 estrellas ubicado en Achocalla, La Paz – Bolivia.
+    Nacimos con la visión de crear un espacio exclusivo donde el lujo, la elegancia
+    y la tranquilidad se fusionan en perfecta armonía.
+    <br><br>
+    Nuestro compromiso es brindar una experiencia inolvidable, combinando
+    arquitectura moderna, vistas panorámicas y un servicio personalizado
+    que supera los estándares internacionales de hospitalidad.
+  </p>
+</section>
+
+<section style="background:#ffffff;">
+  <h2>Nuestros Valores</h2>
+
+  <div class="values">
+
+    <div class="value-box">
+      <i class="fas fa-gem"></i>
+      <h3>Exclusividad</h3>
+      <p>Diseñamos cada detalle para ofrecer una experiencia premium única en Bolivia.</p>
+    </div>
+
+    <div class="value-box">
+      <i class="fas fa-concierge-bell"></i>
+      <h3>Servicio Personalizado</h3>
+      <p>Nuestro equipo está capacitado para anticipar cada necesidad de nuestros huéspedes.</p>
+    </div>
+
+    <div class="value-box">
+      <i class="fas fa-leaf"></i>
+      <h3>Armonía Natural</h3>
+      <p>Integramos el paisaje de Achocalla con una arquitectura elegante y sostenible.</p>
+    </div>
+
+  </div>
+
+  <a href="index.html#reservas" class="btn">Reservar Ahora</a>
+</section>
+
+<footer>
+  <p>© 2026 Celeste Resort | Hotel 5 Estrellas en Achocalla</p>
+</footer>
+
+</body>
+</html>
