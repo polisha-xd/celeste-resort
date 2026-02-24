@@ -235,7 +235,20 @@ font-size:14px;
   <h2>Solicitar Reserva</h2>
   <form action="https://formsubmit.co/celesteresort.bo@gmail.com" method="POST">
     <input type="text" name="Nombre" placeholder="Nombre completo" required>
-    <input type="email" name="Email" placeholder="Correo electrónico" required>
+<input type="email" name="Email" placeholder="Correo electrónico" required>
+
+<select name="Habitacion" required>
+  <option value="">Selecciona tu habitación</option>
+  <option value="Suite Ejecutiva con Vista - 180 USD">
+    Suite Ejecutiva con Vista – 180 USD
+  </option>
+  <option value="Habitación Deluxe - 130 USD">
+    Habitación Deluxe – 130 USD
+  </option>
+  <option value="Suite Presidencial - 350 USD">
+    Suite Presidencial – 350 USD
+  </option>
+</select>
 
     <div style="display:flex; gap:10px;">
       <div style="flex:1; text-align:left;">
@@ -266,7 +279,7 @@ font-size:14px;
   <p>✉ celesteresort.bo@gmail.com</p>
 
   <form action="https://formsubmit.co/celesteresort.bo@gmail.com" method="POST">
-    <input type="text" name="Nombre" placeholder="Tu nombre" required>
+    <input type="text" name="Nombre" placeholder="Tu nombre" required> 
     <input type="email" name="Email" placeholder="Tu correo" required>
     <textarea name="Mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
     <button type="submit">Enviar Mensaje</button>
@@ -384,4 +397,5 @@ traducir(this.value);
 </script>
 
 </body>
+
 </html>
